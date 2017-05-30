@@ -16,12 +16,14 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.tencent.bugly.Bugly;
+
+import java.util.List;
+
 import xyz.monkeytong.hongbao.R;
 import xyz.monkeytong.hongbao.utils.ConnectivityUtil;
 import xyz.monkeytong.hongbao.utils.UpdateTask;
-
-import java.util.List;
 
 
 public class MainActivity extends Activity implements AccessibilityManager.AccessibilityStateChangeListener {
@@ -36,7 +38,7 @@ public class MainActivity extends Activity implements AccessibilityManager.Acces
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //CrashReport.initCrashReport(getApplicationContext(), "900019352", false);
-        Bugly.init(getApplicationContext(), "900019352", false);
+        Bugly.init(getApplicationContext(), "cdf8a7e8c2", false);
         setContentView(R.layout.activity_main);
         pluginStatusText = (TextView) findViewById(R.id.layout_control_accessibility_text);
         pluginStatusIcon = (ImageView) findViewById(R.id.layout_control_accessibility_icon);
